@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+        http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+
+    <description>Math functions library</description>
+    <display-name>Math functions</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>m</short-name>
+    <uri>http://taglibs.ailis.de/math</uri>
+
+    <function>
+        <name>E</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double E()</function-signature>
+    </function>
+
+    <function>
+        <name>PI</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double PI()</function-signature>
+    </function>
+
+    <function>
+        <name>abs</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double abs(double)</function-signature>
+    </function>
+
+    <function>
+        <name>acos</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double acos(double)</function-signature>
+    </function>
+
+    <function>
+        <name>asin</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double asin(double)</function-signature>
+    </function>
+
+    <function>
+        <name>atan</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double atan(double)</function-signature>
+    </function>
+
+    <function>
+        <name>atan2</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double atan2(double, double)</function-signature>
+    </function>
+
+    <function>
+        <name>cbrt</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double cbrt(double)</function-signature>
+    </function>
+
+    <function>
+        <name>ceil</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>long ceil(double)</function-signature>
+    </function>
+
+    <function>
+        <name>cos</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double cos(double)</function-signature>
+    </function>
+
+    <function>
+        <name>cosh</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double cosh(double)</function-signature>
+    </function>
+
+    <function>
+        <name>exp</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double exp(double)</function-signature>
+    </function>
+
+    <function>
+        <name>expm1</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double expm1(double)</function-signature>
+    </function>
+
+    <function>
+        <name>floor</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>long floor(double)</function-signature>
+    </function>
+
+    <function>
+        <name>hypot</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double hypot(double, double)</function-signature>
+    </function>
+
+    <function>
+        <name>IEEEremainder</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double hypot(double, double)</function-signature>
+    </function>
+
+    <function>
+        <name>log</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double log(double)</function-signature>
+    </function>
+
+    <function>
+        <name>log10</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double log10(double)</function-signature>
+    </function>
+
+    <function>
+        <name>log1p</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double log1p(double)</function-signature>
+    </function>
+
+    <function>
+        <name>max</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double max(double)</function-signature>
+    </function>
+
+    <function>
+        <name>min</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double min(double)</function-signature>
+    </function>
+
+    <function>
+        <name>pow</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double pow(double, double)</function-signature>
+    </function>
+
+    <function>
+        <name>random</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double random()</function-signature>
+    </function>
+
+    <function>
+        <name>rint</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double rint(double)</function-signature>
+    </function>
+
+    <function>
+        <name>round</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>long round(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>signum</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double signum(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>sin</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double sin(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>sinh</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double sinh(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>sqrt</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double sqrt(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>tan</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double tan(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>tanh</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double tanh(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>toDegrees</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double toDegrees(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>toRadians</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double toRadians(double)</function-signature>
+    </function>
+    
+    <function>
+        <name>ulp</name>
+        <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
+        <function-signature>double ulp(double)</function-signature>
+    </function>
+    
+</taglib>

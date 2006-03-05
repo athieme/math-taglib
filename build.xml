@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project name="math-taglib" default="dist">
+    <property file="build.properties" />
+    <property file="build-default.properties" />
+    <property name="version" value="1.0.0" />
+
+    <available classname="org.eclipse.core.launcher.Main"
+               classpath="${java.classpath}"
+               property="build.compiler"
+               value="org.eclipse.jdt.core.JDTCompilerAdapter" />
+
+    <path id="classpath">
+        <pathelement location="bin"/>
+    </path>
+
+    <target name="build" description="Builds the project">
+        <mkdir dir="bin"/>
+        <javac srcdir="src"
+               destdir="bin"
+               classpathref="classpath"
+               debug="${javac.debug}"
+               optimize="${javac.optimize}"
+               nowarn="${javac.nowarn}" 
+               target="${javac.target}" 
+               source="${javac.source}" 
+               encoding="UTF-8" />
+    </target>
+
+    <target name="clean" description="Cleans the project">
+        <delete>
+            <fileset dir=".">
+                <include name="*.jar" />
+                <include name="*.zip" />
+            </fileset>
+        </delete>
+        <delete dir="doc" />
+        <delete dir="bin" />
+    </target>
+    
+    <target name="dist" 
+            depends="build" 
+            description="Creates the distribution files">
+        <jar destfile="math-taglib-${version}.jar" >
+            <metainf dir="META-INF" />
+            <fileset dir="bin">
+                <include name="**/*" />
+            </fileset>
+        </jar>
+        <zip destfile="math-taglib-${version}.zip">
+            <fileset dir=".">
+                <include name="**" />
+                <exclude name="doc/**" />
+                <exclude name="tmp/**" />
+                <exclude name="bin/**" />
+                <exclude name="*.jar" />
+                <exclude name="*.zip" />
+            </fileset>
+            <fileset dir=".">
+                <include name="math-taglib-${version}.jar" />
+            </fileset>
+        </zip>
+    </target>    
+
+    <target name="doc"
+            description="Creates JavaDoc documentation">
+        <javadoc destdir="doc" 
+                 classpathref="classpath" 
+                 overview="src/overview.html">
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </javadoc>
+    </target>
+</project>
