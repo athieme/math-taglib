@@ -2,9 +2,22 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.ailis.taglibs.math</groupId>
   <artifactId>math-taglib</artifactId>
+  <packaging>jar</packaging>
   <name>Math Tag Library</name>
   <version>1.0.1</version>
   <url>http://www.ailis.de/~k/software/projects/math-taglib</url>
+  <description>A simple tag library providing math functions</description>
+  <licenses>
+    <license>
+      <name>Lesser General Pubvlic License, Version 2.0</name>
+      <url>http://www.gnu.org/licenses/licenses.html#LGPL</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>http://www.ailis.de/cgi-bin/viewcvs.cgi/math-taglib/</url>
+    <connection>scm:cvs:pserver:anoncvs@ailis.de:/var/cvs/math-taglib</connection>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -12,4 +25,11 @@
       <version>3.8.1</version>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>kay-repository</id>
+      <name>Kay's Maven repository</name>
+      <url>scpexe://ailis.de/home/k/repository/maven/</url>
+    </repository>
+  </distributionManagement>
 </project>
