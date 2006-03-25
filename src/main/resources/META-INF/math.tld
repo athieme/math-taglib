@@ -129,13 +129,13 @@
     <function>
         <name>max</name>
         <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
-        <function-signature>double max(double)</function-signature>
+        <function-signature>double max(double, double)</function-signature>
     </function>
 
     <function>
         <name>min</name>
         <function-class>de.ailis.taglibs.math.MathWrapper</function-class>
-        <function-signature>double min(double)</function-signature>
+        <function-signature>double min(double, double)</function-signature>
     </function>
 
     <function>
