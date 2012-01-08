@@ -1,23 +1,105 @@
-<?xml version="1.0"?><project>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  
   <groupId>de.ailis.taglibs.math</groupId>
   <artifactId>math-taglib</artifactId>
   <packaging>jar</packaging>
   <name>Math Tag Library</name>
-  <version>1.0.2</version>
-  <url>http://www.ailis.de/~k/software/projects/math-taglib</url>
-  <description>A simple tag library providing math functions</description>
+  <version>1.0.2-SNAPSHOT</version>
+  <url>http://kayahr.github.com/${project.artifactId}/</url>
+  <description>JSP tag library providing math functions.</description>
+  <inceptionYear>2006</inceptionYear>
+  <organization>
+    <name>Klaus Reimer</name>
+    <url>http://www.ailis.de/~k/</url>
+  </organization>
+  
   <licenses>
     <license>
-      <name>Lesser General Public License, Version 2.0</name>
-      <url>http://www.gnu.org/licenses/licenses.html#LGPL</url>
+      <name>LGPL</name>
+      <url>LICENSE.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
+    
+  <developers>
+    <developer>
+      <id>k</id>
+      <name>Klaus Reimer</name>
+      <email>k@ailis.de</email>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+1</timezone>
+      <url>http://www.ailis.de/~k/</url>
+    </developer>        
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <releasesUrl>http://nexus.ailis.de/content/repositories/releases/de/ailis/${project.artifactId}/${project.artifactId}/${project.version}</releasesUrl>
+    <snapshotsUrl>http://nexus.ailis.de/content/repositories/snapshots/de/ailis/${project.artifactId}/${project.artifactId}</snapshotsUrl>
+  </properties>
+  
   <scm>
-    <url>http://www.ailis.de/cgi-bin/viewcvs.cgi/math-taglib/</url>
-    <connection>scm:cvs:pserver:anoncvs@ailis.de:/var/cvs/math-taglib</connection>
+    <connection>scm:git:git://github.com/kayahr/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/kayahr/${project.artifactId}.git</developerConnection>
+    <url>http://github.com/kayahr/${project.artifactId}</url>
   </scm>
+       
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/kayahr/${project.artifactId}/issues</url>
+  </issueManagement>
+  
+  <build>
+    <plugins>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+      
+    </plugins>
+  </build>  
+  
+  <repositories>
+    <repository>
+      <id>ailis-releases</id>
+      <name>Ailis Maven Releases</name>
+      <url>http://nexus.ailis.de/content/groups/public/</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+    <repository> 
+      <id>ailis-snapshots</id>
+      <name>Ailis Maven Snapshots</name>
+      <url>http://nexus.ailis.de/content/groups/public-snapshots/</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>ailis-releases</id>
+      <name>Ailis Maven Releases</name>
+      <url>http://nexus.ailis.de/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>ailis-snapshots</id>
+      <name>Ailis Maven Snapshots</name>
+      <url>http://nexus.ailis.de/content/repositories/snapshots</url>
+    </snapshotRepository>    
+  </distributionManagement>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -25,11 +107,4 @@
       <version>3.8.1</version>
     </dependency>
   </dependencies>
-  <distributionManagement>
-    <repository>
-      <id>kay-repository</id>
-      <name>Kay's Maven repository</name>
-      <url>scpexe://ailis.de/home/k/repository/maven/</url>
-    </repository>
-  </distributionManagement>
 </project>
